@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../index.css';
-import logo from '../images/landing_page/Gesture_Logo_06.png';
+import logo from '../images/landing_page/Gesture_Logo_05.png';
 import undrawSVG from '../images/landing_page/undraw_back_to_school_inwc.svg'
 
 const LandingPage = () => {
@@ -15,7 +15,7 @@ const LandingPage = () => {
     // </div>
 
     <div>
-      <img src={logo} className="absolute w-12 ml-2 mt-2" alt="Gesture logo"/>
+      <img src={logo} className="absolute w-32 ml-4 mt-4" alt="Gesture logo"/>
       {/* Hero Starts */}
       <div className="hero min-h-screen bg-base-200">
         <div className="text-center flex flex-col items-center justify-center m-4">
@@ -41,8 +41,9 @@ const LandingPage = () => {
                   <label class="label">
                     <span class="label-text">Password</span>
                   </label> 
-                  <input placeholder="password" class="input input-bordered input-primary" type="password"/>
+                  <input placeholder="password" class="input input-bordered input-primary mb-4" type="password"/>
                 </div>
+                <a href="/" className="text-primary">Forgot Password</a>
                 <div class="modal-action">
                     <button class="btn btn-primary" type="submit">Login</button> 
                     <a href="/" class="btn">Close</a>
