@@ -14,10 +14,7 @@ module.exports = {
   daisyui: {
     styled: true,
     themes: [
-      'halloween',
-      'dark',
-      'forest',
-      'synthwave'
+      'halloween'
     ]
   }
 }
