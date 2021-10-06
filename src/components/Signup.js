@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import '../index.css';
+import '../App.css';
 
 export default function Signup() {
   const emailRef = useRef()
@@ -34,7 +34,7 @@ export default function Signup() {
   return (
     <>
       <div>
-        <div class="modal-box">
+        <div class="modal-box App">
           <h2 className="text-primary font-bold text-3xl">Sign Up</h2>        
           {error && <alert variant="danger">{error}</alert>}  
           <form onSubmit={handleSubmit}>

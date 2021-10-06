@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import '../index.css';
+import '../App.css';
 
 export default function UpdateProfile() {
   const emailRef = useRef()
@@ -44,7 +44,7 @@ export default function UpdateProfile() {
   return (
     <>
       <div>
-        <div>
+        <div className="App">
           <h2 className="text-center mb-4">Update Profile</h2>
           {error && <alert variant="danger">{error}</alert>}
           {error && <alert variant="danger">{error}</alert>}

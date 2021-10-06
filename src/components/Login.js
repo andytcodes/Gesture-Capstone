@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import "../index.css"
+import "../App.css"
 
 export default function Login() {
   const emailRef = useRef()
@@ -28,8 +28,8 @@ export default function Login() {
 
   return (
     <>
-    <div className="App">      
-      <div class="modal-box model">
+    <div>      
+      <div class="modal-box model App">
           <h2 className="text-primary font-bold text-3xl" >Log In</h2>
           {error && <alert variant="danger">{error}</alert>}      
           {error && <alert variant="danger">{error}</alert>}            

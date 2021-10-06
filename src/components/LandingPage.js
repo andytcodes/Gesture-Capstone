@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../index.css';
 import logo from '../images/landing_page/Gesture_Logo_05.png';
 import undrawSVG from '../images/landing_page/undraw_back_to_school_inwc.svg'
 import '../index.css';
-import { Link } from 'react-router-dom';
+
 
 const LandingPage = () => {
 
@@ -28,7 +27,7 @@ const LandingPage = () => {
                 <em className="text-primary"> Gesture</em>! 👋
           </h1>
           {/* Login Form */}
-          <Link to="/login" className="btn btn-accent btn-wide mb-2" >Login</Link>
+          <a href="/login" className="btn btn-accent btn-wide mb-2" >Login</a>
           
           {/* Login Form End */}
           {/* Register Form */}

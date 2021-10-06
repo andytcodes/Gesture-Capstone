@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom";
-import '../index.css';
+import '../App.css';
 
 export default function ForgotPassword() {
   const emailRef = useRef()
@@ -28,7 +28,7 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <div>
+      <div className="App">
         <div class="modal-box">
           <h2 className="text-primary font-bold text-3xl">Password Reset</h2>
           {error && <alert variant="danger">{error}</alert>}
