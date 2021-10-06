@@ -28,8 +28,8 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <div className="App">
-        <div class="modal-box">
+      <div>
+        <div class="modal-box App">
           <h2 className="text-primary font-bold text-3xl">Password Reset</h2>
           {error && <alert variant="danger">{error}</alert>}
           {message && <alert variant="success">{message}</alert>}          
