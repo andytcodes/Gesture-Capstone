@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import '../index.css';
 
 export default function Dashboard() {
   const [error, setError] = useState("")

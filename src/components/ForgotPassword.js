@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import '../index.css';
 
 export default function ForgotPassword() {
   const emailRef = useRef()
@@ -28,26 +29,28 @@ export default function ForgotPassword() {
   return (
     <>
       <div>
-        <div>
+        <div class="modal-box">
           <h2 className="text-primary font-bold text-3xl">Password Reset</h2>
           {error && <alert variant="danger">{error}</alert>}
           {message && <alert variant="success">{message}</alert>}          
           <form onSubmit={handleSubmit} class="modal-box">
-            <div id="email" >
+            <div id="email" class="form-control">
+              <label class="label">
               <label class="label-text">Email</label><br/>
+              </label>
               <input class="input input-bordered input-primary" type="email" ref={emailRef} required />
             </div>
-            <button class="btn btn-primary" disabled={loading} className="w-100" type="submit">
-              Reset Password
-            </button>
+            <div class="modal-action">
+              <button className="btn btn-accent btn-wide mb-2" disabled={loading} className="w-100" type="submit">
+                Reset Password
+              </button>
+              <a href="/" class="btn">Close</a>
+            </div>
           </form>
           <div className="w-100 text-center mt-3">
             <Link to="/login">Login</Link>
           </div>
         </div>
-      </div>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
       </div>
     </>
   )

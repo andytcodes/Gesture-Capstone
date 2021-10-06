@@ -8,16 +8,14 @@ import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import LandingPage from "./LandingPage"
+import '../index.css';
 
 
 
 function App() {
   return (
-    <div
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+    <div>    
+      <div>
         <Router>
           <AuthProvider>
             <Switch>
