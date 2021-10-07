@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom';
 import logo from '../images/landing_page/Gesture_Logo_05.png';
 import undrawSVG from '../images/landing_page/undraw_back_to_school_inwc.svg'
 import '../index.css';
+import Login from './Login';
+import Signup from './Signup';
 
 
 const LandingPage = () => {
 
   return(
-    // <div className="h-screen">
-    //   <div className="h-120p w-64 bg-lightAccent bg-opacity-20 absolute transform rotate-20 -left-9 -top-9"></div>
-    //   <div className="h-120p w-64 bg-lightAccent bg-opacity-20 absolute transform rotate-140 -left-9 -bottom-15"></div>
-    //   <img src={TreeSwingSVG} alt="Tree-Swing" className="absolute top-26 -left-13"/>
-    //   <img src={logo} alt="Gesture logo" className="pt-96 ml-24 w-18"/>
-    // </div>
 
     <div>
       <img src={logo} className="absolute w-32 ml-4 mt-4" alt="Gesture logo"/>
@@ -27,12 +23,13 @@ const LandingPage = () => {
                 <em className="text-primary"> Gesture</em>! 👋
           </h1>
           {/* Login Form */}
-          <a href="/login" className="btn btn-accent btn-wide mb-2" >Login</a>
+          {/* <a href="/login" className="btn btn-accent btn-wide mb-2" >Login</a> */}
+          <Login/>
           
           {/* Login Form End */}
           {/* Register Form */}
-          <a href="/Signup" className="link-primary block mb-10">Register</a>
-          
+          {/* <a href="/Signup" className="link-primary block mb-10">Register</a> */}
+          <Signup/>
           {/* Register Form End */}
           {/* collapse content */}
           <div className="collapse collapse-arrow w-60 border rounded-box border-primary border-opacity-5 shadow-2xl" tabIndex="0">

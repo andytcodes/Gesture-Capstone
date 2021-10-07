@@ -34,30 +34,32 @@ export default function Signup() {
   return (
     <>
       <div>
-        <div class="modal-box App">
+        <a href="#register-form" className="link-primary block mb-10">Register</a>
+        <div id="register-form" class="modal">
+        <div class="modal-box">
           <h2 className="text-primary font-bold text-3xl">Sign Up</h2>        
           {error && <alert variant="danger">{error}</alert>}  
           <form onSubmit={handleSubmit}>
             <div id="email" class="form-control">
               <label class="label">
-              <label class="label-text">Email</label><br/>
+              <span class="label-text">Email</span>
               </label>
-              <input class="input input-bordered input-primary" type="email" ref={emailRef} required />
+              <input placeholder="email" class="input input-bordered input-primary" type="email" ref={emailRef} required />
             </div>
             <div id="password" class="form-control">
               <label class="label">
-              <label class="label-text">Password</label><br/>
+                <span class="label-text">Password</span>
               </label>
-              <input class="input input-bordered input-primary" type="password" ref={passwordRef} required /> 
+              <input placeholder="password" class="input input-bordered input-primary" type="password" ref={passwordRef} required /> 
             </div>
             <div id="password-confirm" class="form-control">
               <label class="label">
-              <label class="label-text">Password Confirmation</label> <br/>
+              <span class="label-text">Password Confirmation</span>
               </label>
-              <input class="input input-bordered input-primary" type="password" ref={passwordConfirmRef} required />
+              <input placeholder="confirm password" class="input input-bordered input-primary" type="password" ref={passwordConfirmRef} required />
             </div>
             <div class="modal-action" >
-            <button class="btn btn-primary" disabled={loading} className="w-100" type="submit">
+            <button class="btn btn-primary" disabled={loading} type="submit">
               Register
             </button>
             <a href="/" class="btn" >Close</a>
@@ -65,6 +67,7 @@ export default function Signup() {
             </div>
           </form>
         </div>
+      </div>
       </div>
     </>
   )

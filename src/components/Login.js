@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import "../App.css"
+import "../index.css";
 
 export default function Login() {
   const emailRef = useRef()
@@ -28,9 +28,11 @@ export default function Login() {
 
   return (
     <>
-    <div>      
-      <div class="modal-box model App">
-          <h2 className="text-primary font-bold text-3xl" >Log In</h2>
+    <div>
+      <a href="#login-form" className="btn btn-accent btn-wide mb-2" >Login</a>
+          <div id="login-form" class="modal">
+            <div class="modal-box">
+          <h2 className="text-primary font-bold text-3xl" >Login</h2>
           {error && <alert variant="danger">{error}</alert>}      
           {error && <alert variant="danger">{error}</alert>}            
           <form onSubmit={handleSubmit}>
@@ -38,23 +40,24 @@ export default function Login() {
               <label class="label">
                 <label class="label-text">Email</label> <br/>
               </label>
-              <input class="input input-bordered input-primary" type="email" ref={emailRef} required />
+              <input placeholder="email" class="input input-bordered input-primary" type="email" ref={emailRef} required />
             </div>
             <div id="password" class="form-control">
               <label class="label">
                 <label class="label-text" >Password</label>
               </label>
-              <input class="input input-bordered input-primary" type="password" ref={passwordRef} required />
+              <input placeholder="password" class="input input-bordered input-primary mb-4" type="password" ref={passwordRef} required />
             </div>
             <Link to="/forgot-password" className="text-primary">Forgot Password?</Link>
             <div class="modal-action">
-              <button class="btn btn-primary" disabled={loading} variant="warning" className="w-100" type="submit">
-                Log In
+              <button class="btn btn-primary" disabled={loading} variant="warning" type="submit">
+                Login
               </button>
               <a href="/" class="btn">Close</a>              
             </div>
           </form>                
       </div>
+    </div>
     </div>
     </>
   )
