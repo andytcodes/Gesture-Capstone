@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import '../App.css';
+import '../index.css';
 
 export default function UpdateProfile() {
   const emailRef = useRef()
@@ -44,43 +45,49 @@ export default function UpdateProfile() {
   return (
     <>
       <div>
-        <div className="App">
-          <h2 className="text-center mb-4">Update Profile</h2>
+        <div class="modal-box App">
+          <h2 className="text-primary font-bold text-3xl">Update Profile</h2>
           {error && <alert variant="danger">{error}</alert>}
           {error && <alert variant="danger">{error}</alert>}
           <form onSubmit={handleSubmit}>
-            <div id="email">
-              <label>Email</label>
+            <div id="email" class="form-control">
+              <label class="label">
+                <label class="label-text">Email</label>
+              </label>
               <input
-                type="email"
+                type="email" class="input input-bordered input-primary"
                 ref={emailRef}
                 required
                 defaultValue={currentUser.email}
               />
             </div>
-            <div id="password">
-              <label>Password</label>
-              <input
+            <div id="password" class="form-control">
+              <label class="label">
+                <label class='label-text'>Password</label>
+              </label>
+              <input class="input input-bordered input-primary"
                 type="password"
                 ref={passwordRef}
                 placeholder="Leave blank to keep the same"
               />
             </div>
-            <div id="password-confirm">
-              <label>Password Confirmation</label>
+            <div id="password-confirm" class="form-control">
+              <label class='label'>
+                <label class='label-text'>Password Confirmation</label>
+              </label>
               <input
-                type="password"
+                type="password" class="input input-bordered input-primary"
                 ref={passwordConfirmRef}
                 placeholder="Leave blank to keep the same"
-              />
+              /> <br />
             </div>
-            <button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} type="submit" className="btn btn-accent btn-wide mb-2">
               Update
             </button>
           </form>
         </div>
       </div>
-      <div className="w-100 text-center mt-2">
+      <div className="App">
         <Link to="/Home">Cancel</Link>
       </div>
     </>
