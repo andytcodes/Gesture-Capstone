@@ -14,11 +14,11 @@ const LandingPage = () => {
     <div>
       <img src={logo} className="absolute w-32 ml-4 mt-4" alt="Gesture logo"/>
       {/* Hero Starts */}
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-content">
         <div className="text-center flex flex-col items-center justify-center m-4">
           {/* Main */}
           <img src={undrawSVG} alt="Time to learn" className="w-48 xl:w-80 mb-4 xl:mb-8"/>
-          <h1 className="text-2xl xl:text-4xl font-bold mb-4 xl:mb-8">
+          <h1 className="text-2xl xl:text-4xl font-bold mb-4 xl:mb-8 text-primary-content">
                 It's your time to sign! <br/> Begin your ASL journey on  
                 <em className="text-primary"> Gesture</em>! 👋
           </h1>
@@ -27,7 +27,7 @@ const LandingPage = () => {
           {/* Register Form */}
           <Register/>
           {/* collapse content */}
-          <div className="collapse collapse-arrow w-60 border rounded-box border-primary border-opacity-5 shadow-2xl" tabIndex="0">
+          <div className="collapse collapse-arrow w-60 border rounded-box border-primary border-opacity-5 shadow-lg text-primary-content" tabIndex="0">
             <input type="checkbox"/> 
             <div className="collapse-title text-xl">What is <em className="text-primary"> Gesture</em>?</div>
             <div className="collapse-content">

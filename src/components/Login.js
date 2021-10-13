@@ -36,31 +36,30 @@ export default function Login() {
   return (
     <>
       <div>
-        <a href="#login-form" className="btn btn-accent btn-wide mb-2" >Login</a>
+        <a href="#login-form" className="btn btn-accent btn-wide mb-2 font-bold" >Login</a>
         <div id="login-form" class="modal">
-          <div class="modal-box">
-            <h2 className="text-primary font-bold text-3xl" >Login</h2>
-            {error && <alert variant="danger">{error}</alert>}
-            {error && <alert variant="danger">{error}</alert>}
+          <div class="modal-box bg-neutral-content">
+            <h2 className="text-primary font-bold text-3xl mb-2" >Login</h2>
+            {error && <alert variant="danger" className="text-error font-semibold">{error}</alert>}
             <form onSubmit={handleSubmit}>
               <div id="email" class="form-control">
                 <label class="label">
-                  <label class="label-text">Email</label> <br />
+                  <label class="label-text text-black">Email</label> <br />
                 </label>
-                <input placeholder="email" class="input input-bordered input-primary" type="email" ref={emailRef} required />
+                <input placeholder="email" class="input input-bordered input-primary bg-neutral-content text-black" type="email" ref={emailRef} required />
               </div>
               <div id="password" class="form-control">
                 <label class="label">
-                  <label class="label-text" >Password</label>
+                  <label class="label-text text-black" >Password</label>
                 </label>
-                <input placeholder="password" class="input input-bordered input-primary mb-4" type="password" ref={passwordRef} required />
+                <input placeholder="password" class="input input-bordered input-primary mb-4 bg-neutral-content text-black" type="password" ref={passwordRef} required />
               </div>
               <Link to="/forgot-password" className="text-primary">Forgot Password?</Link>
               <div class="modal-action">
                 <button class="btn btn-primary" disabled={loading} variant="warning" type="submit">
                   Login
                 </button>
-                <a href="/" class="btn">Close</a>
+                <a href="/" class="btn btn-primary">Close</a>
               </div>
             </form>
           </div>

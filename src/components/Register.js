@@ -38,35 +38,35 @@ export default function Register() {
   return (
     <>
       <div>
-        <a href="#register-form" className="link-primary block mb-10">Register</a>
+        <a href="#register-form" className="link-primary block mb-10 font-medium">Register</a>
         <div id="register-form" class="modal">
-          <div class="modal-box">
-            <h2 className="text-primary font-bold text-3xl">Sign Up</h2>
-            {error && <alert variant="danger">{error}</alert>}
+          <div class="modal-box bg-neutral-content">
+            <h2 className="text-primary font-bold text-3xl mb-2">Sign Up</h2>
+            {error && <alert variant="danger" className="text-error font-semibold">{error}</alert>}
             <form onSubmit={handleSubmit}>
               <div id="email" class="form-control">
                 <label class="label">
-                  <span class="label-text">Email</span>
+                  <span class="label-text text-black">Email</span>
                 </label>
-                <input placeholder="email" class="input input-bordered input-primary" type="email" ref={emailRef} required />
+                <input placeholder="email" class="text-black input input-bordered input-primary bg-neutral-content" type="email" ref={emailRef} required />
               </div>
               <div id="password" class="form-control">
                 <label class="label">
-                  <span class="label-text">Password</span>
+                  <span class="label-text text-black">Password</span>
                 </label>
-                <input placeholder="password" class="input input-bordered input-primary" type="password" ref={passwordRef} required />
+                <input placeholder="password" class="text-black input input-bordered input-primary bg-neutral-content" type="password" ref={passwordRef} required />
               </div>
               <div id="password-confirm" class="form-control">
                 <label class="label">
-                  <span class="label-text">Password Confirmation</span>
+                  <span class="label-text text-black">Password Confirmation</span>
                 </label>
-                <input placeholder="confirm password" class="input input-bordered input-primary" type="password" ref={passwordConfirmRef} required />
+                <input placeholder="confirm password" class="text-black input input-bordered input-primary bg-neutral-content" type="password" ref={passwordConfirmRef} required />
               </div>
               <div class="modal-action" >
                 <button class="btn btn-primary" disabled={loading} type="submit">
                   Register
                 </button>
-                <a href="/" class="btn" >Close</a>
+                <a href="/" class="btn btn-primary" >Close</a>
 
               </div>
             </form>
