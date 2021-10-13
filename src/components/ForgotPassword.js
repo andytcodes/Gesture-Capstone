@@ -30,25 +30,25 @@ export default function ForgotPassword() {
     <>
       <div>
         <div class="modal-box App">
-          <h2 className="text-primary font-bold text-3xl">Password Reset</h2>
-          {error && <alert variant="danger">{error}</alert>}
-          {message && <alert variant="success">{message}</alert>}          
-          <form onSubmit={handleSubmit} class="modal-box">
+          <h2 className="text-primary font-bold text-3xl">Password Reset</h2>     
+          <form onSubmit={handleSubmit}>
             <div id="email" class="form-control">
               <label class="label">
               <label class="label-text">Email</label><br/>
               </label>
-              <input class="input input-bordered input-primary" type="email" ref={emailRef} required />
+              <input class="input input-bordered input-primary mb-4" type="email" ref={emailRef} required />
+              {error && <alert variant="danger">{error}</alert>}
+              {message && <alert variant="success">{message}</alert>}     
             </div>
             <div class="modal-action">
-              <button className="btn btn-accent btn-wide mb-2" disabled={loading} className="w-100" type="submit">
+              <button className="btn btn-primary" disabled={loading} type="submit">
                 Reset Password
               </button>
               <a href="/" class="btn">Close</a>
             </div>
           </form>
-          <div className="w-100 text-center mt-3">
-            <Link to="/login">Login</Link>
+          <div className="link text-primary mt-6">
+            <Link to="/">Login</Link>
           </div>
         </div>
       </div>
