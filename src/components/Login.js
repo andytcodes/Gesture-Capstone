@@ -2,14 +2,19 @@ import React, { useRef, useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import "../index.css";
+import app from "../firebase";
+
 
 export default function Login() {
   const emailRef = useRef()
   const passwordRef = useRef()
   const { login } = useAuth()
   const [error, setError] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
+  const userid = Math.floor(Math.random() * 101);
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -25,6 +30,8 @@ export default function Login() {
 
     setLoading(false)
   }
+
+
 
   return (
     <>

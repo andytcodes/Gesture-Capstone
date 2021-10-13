@@ -8,13 +8,15 @@ import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import LandingPage from "./LandingPage"
+import Home from "./Home"
+import Alphabet from "./Alphabet"
 import '../index.css';
 
 
 
 function App() {
   return (
-    <div>    
+    <div>
       <div>
         <Router>
           <AuthProvider>
@@ -25,6 +27,8 @@ function App() {
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
+              <Route path="/categories" component={Home} />
+              <Route path="/alphabet" component={Alphabet} />
             </Switch>
           </AuthProvider>
         </Router>
