@@ -3,6 +3,7 @@ import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import '../App.css';
 import app from "../firebase";
+import UpdateProfile from "./UpdateProfile";
 
 export default function Dashboard() {
   const [error, setError] = useState("")
@@ -36,10 +37,11 @@ export default function Dashboard() {
 
   return (
     <>
-      <div class="sticky top-0 border-solid border-2 border-primary navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+      {document.documentElement.classList.add('bg-base-content')}
+      <div class="sticky top-0 navbar mb-2 shadow-lg bg-neutral-content text-primary-content">
 
         <div class="flex-1 px-2 mx-2">
-          <span class="text-lg font-bold text-primary">
+          <span class="text-xl font-bold text-primary">
             Gesture
           </span>
         </div>
@@ -52,12 +54,10 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 text-neutral">
         <h2 className="mb-4 text-3xl">Profile</h2>
         <strong>Email:</strong> {currentUser.email} <br />
-        <Link to="/update-profile" className="btn btn-primary w-100 mt-3" >
-            Update Profile
-        </Link>
+        <UpdateProfile/>
       </div>
     </>
   )

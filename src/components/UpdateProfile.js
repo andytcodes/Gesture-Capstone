@@ -10,6 +10,7 @@ export default function UpdateProfile() {
   const passwordConfirmRef = useRef()
   const { currentUser, updatePassword, updateEmail } = useAuth()
   const [error, setError] = useState("")
+  const [success, setSuccess] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
@@ -33,9 +34,10 @@ export default function UpdateProfile() {
     Promise.all(promises)
       .then(() => {
         history.push("/Home") // /
+        setSuccess("Updated Password!")
       })
       .catch(() => {
-        setError("Failed to update account")
+        setError("Failed to update account.")
       })
       .finally(() => {
         setLoading(false)
@@ -44,18 +46,19 @@ export default function UpdateProfile() {
 
   return (
     <>
-      <div>
-        <div class="modal-box App">
-          <h2 className="text-primary font-bold text-3xl">Update Profile</h2>
-          {error && <alert variant="danger">{error}</alert>}
-          {error && <alert variant="danger">{error}</alert>}
+      <a href="#update-profile" className="btn btn-accent btn-wide mt-4 font-bold" >Update Profile</a>
+      <div id="update-profile" class="modal">
+        <div class="modal-box bg-neutral-content">
+          <h2 className="text-primary font-bold text-3xl mb-2">Update Profile</h2>
+          {error && <alert variant="danger" class="text-error font-semibold">{error}</alert>}
+          {success && <alert variant="success" class="text-success font-semibold">{success}</alert>}  
           <form onSubmit={handleSubmit}>
             <div id="email" class="form-control">
               <label class="label">
-                <label class="label-text">Email</label>
+                <label class="label-text text-black">Email</label>
               </label>
               <input
-                type="email" class="input input-bordered input-primary"
+                type="email" class="input input-bordered input-primary text-black bg-neutral-content"
                 ref={emailRef}
                 required
                 defaultValue={currentUser.email}
@@ -63,9 +66,9 @@ export default function UpdateProfile() {
             </div>
             <div id="password" class="form-control">
               <label class="label">
-                <label class='label-text'>Password</label>
+                <label class='label-text text-black'>Password</label>
               </label>
-              <input class="input input-bordered input-primary"
+              <input class="input input-bordered input-primary text-black bg-neutral-content"
                 type="password"
                 ref={passwordRef}
                 placeholder="Leave blank to keep the same"
@@ -73,10 +76,10 @@ export default function UpdateProfile() {
             </div>
             <div id="password-confirm" class="form-control">
               <label class='label'>
-                <label class='label-text'>Password Confirmation</label>
+                <label class='label-text text-black'>Password Confirmation</label>
               </label>
               <input
-                type="password" class="input input-bordered input-primary"
+                type="password" class="input input-bordered input-primary text-black bg-neutral-content"
                 ref={passwordConfirmRef}
                 placeholder="Leave blank to keep the same"
               /> <br />
@@ -85,10 +88,8 @@ export default function UpdateProfile() {
               Update
             </button>
           </form>
+          <a href="/Home" class="text-primary">Cancel</a>
         </div>
-      </div>
-      <div className="App">
-        <Link to="/Home">Cancel</Link>
       </div>
     </>
   )
