@@ -36,7 +36,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div class="m-2 border-solid border-2 border-primary navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+      <div class="sticky top-0 border-solid border-2 border-primary navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
 
         <div class="flex-1 px-2 mx-2">
           <span class="text-lg font-bold text-primary">
@@ -51,17 +51,14 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="hero min-h-screen">
-        <div className="text-center">
-          <h2 className="mb-4 text-3xl">Profile</h2>
-          <strong>Email:</strong> {currentUser.email} <br />
-          <Link to="/update-profile" className="btn btn-primary w-100 mt-3" >
+
+      <div className="text-center mt-10">
+        <h2 className="mb-4 text-3xl">Profile</h2>
+        <strong>Email:</strong> {currentUser.email} <br />
+        <Link to="/update-profile" className="btn btn-primary w-100 mt-3" >
             Update Profile
-          </Link>
-        </div>
+        </Link>
       </div>
-
-
     </>
   )
 }
