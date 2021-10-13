@@ -5,7 +5,8 @@ import app from "firebase";
 import '../App.css';
 import { auth } from "../firebase"
 
-export default function Signup() {
+export default function Register() {
+
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -33,10 +34,6 @@ export default function Signup() {
 
     setLoading(false)
   }
-
-
-
-
 
   return (
     <>

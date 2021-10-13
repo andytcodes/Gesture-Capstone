@@ -4,7 +4,7 @@ import logo from '../images/landing_page/Gesture_Logo_05.png';
 import undrawSVG from '../images/landing_page/undraw_back_to_school_inwc.svg'
 import '../index.css';
 import Login from './Login';
-import Signup from './Signup';
+import Register from './Register';
 
 
 const LandingPage = () => {
@@ -23,14 +23,9 @@ const LandingPage = () => {
                 <em className="text-primary"> Gesture</em>! 👋
           </h1>
           {/* Login Form */}
-          {/* <a href="/login" className="btn btn-accent btn-wide mb-2" >Login</a> */}
           <Login/>
-          
-          {/* Login Form End */}
           {/* Register Form */}
-          {/* <a href="/Signup" className="link-primary block mb-10">Register</a> */}
-          <Signup/>
-          {/* Register Form End */}
+          <Register/>
           {/* collapse content */}
           <div className="collapse collapse-arrow w-60 border rounded-box border-primary border-opacity-5 shadow-2xl" tabIndex="0">
             <input type="checkbox"/> 
