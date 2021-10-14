@@ -11,6 +11,7 @@ import Alphabet from "./Alphabet"
 import '../index.css';
 import Register from "./Register"
 import Profile from "./Profile"
+import Learn from "./Learn"
 
 
 
@@ -28,6 +29,7 @@ function App() {
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/alphabet" component={Alphabet} />
               <Route path="/profile" component={Profile} />
+              <Route path="/learn" component={Learn} />
             </Switch>
           </AuthProvider>
         </Router>
