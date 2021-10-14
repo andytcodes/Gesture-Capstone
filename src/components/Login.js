@@ -23,7 +23,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/Home")
+      history.push("/dashboard")
     } catch {
       setError("Failed to log in")
     }
@@ -59,7 +59,7 @@ export default function Login() {
                 <button class="btn btn-primary" disabled={loading} variant="warning" type="submit">
                   Login
                 </button>
-                <a href="/" class="btn btn-primary">Close</a>
+                <a href="/#" class="btn btn-primary">Close</a>
               </div>
             </form>
           </div>

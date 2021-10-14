@@ -16,6 +16,8 @@ export default function UpdateProfile() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    setSuccess("")
+    setError("")
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError("Passwords do not match")
     }
@@ -33,7 +35,7 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/Home") // /
+        history.push("/profile#") 
         setSuccess("Updated Password!")
       })
       .catch(() => {
@@ -88,7 +90,7 @@ export default function UpdateProfile() {
               Update
             </button>
           </form>
-          <a href="/Home" class="text-primary">Cancel</a>
+          <a href="/profile#" class="text-primary">Cancel</a>
         </div>
       </div>
     </>

@@ -27,7 +27,7 @@ export default function Register() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      history.push("/Home")
+      history.push("/Dashboard")
     } catch {
       setError("Failed to create an account")
     }
@@ -66,7 +66,7 @@ export default function Register() {
                 <button class="btn btn-primary" disabled={loading} type="submit">
                   Register
                 </button>
-                <a href="/" class="btn btn-primary" >Close</a>
+                <a href="/#" class="btn btn-primary" >Close</a>
 
               </div>
             </form>

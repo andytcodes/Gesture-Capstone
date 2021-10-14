@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom"
 import '../App.css';
 import app from "../firebase";
 
-export default function Dashboard() {
+export default function NavBar() {
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
   const history = useHistory()
@@ -46,14 +46,13 @@ export default function Dashboard() {
         </div>
         <div class="flex-none hidden px-2 mx-2 lg:flex">
           <div class="flex items-stretch">
-            <Link class="btn btn-ghost btn-sm rounded-btn text-primary mr-2" to="/dashboard">Dashboard</Link>
-            <Link class="btn btn-ghost btn-sm rounded-btn mr-2" to="/profile">Profile</Link>
-            <Link class="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</Link>
+            <a class="btn btn-ghost btn-sm rounded-btn text-primary mr-2" href="/dashboard">Dashboard</a>
+            <a class="btn btn-ghost btn-sm rounded-btn mr-2" href="/profile">Profile</a>
+            <a class="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</a>
           </div>
         </div>
         
       </div>
-      
-    </>
+      </>
   )
-}
+};

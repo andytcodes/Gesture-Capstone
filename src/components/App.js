@@ -7,10 +7,10 @@ import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import LandingPage from "./LandingPage"
-import Home from "./Home"
 import Alphabet from "./Alphabet"
 import '../index.css';
 import Register from "./Register"
+import Profile from "./Profile"
 
 
 
@@ -21,13 +21,13 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/Home" component={Dashboard} />
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/" exact component={LandingPage} />
               <Route path="/register" component={Register} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route path="/categories" component={Home} />
               <Route path="/alphabet" component={Alphabet} />
+              <Route path="/profile" component={Profile} />
             </Switch>
           </AuthProvider>
         </Router>
