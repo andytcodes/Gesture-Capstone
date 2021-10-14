@@ -1,6 +1,6 @@
 {
   "name": "gesture",
-  "version": "0.1.0",
+  "version": "14.15.4",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
