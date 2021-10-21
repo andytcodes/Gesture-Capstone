@@ -7,11 +7,12 @@ import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import LandingPage from "./LandingPage"
-import Alphabet from "./Alphabet"
+import Alphabet from "./lessons/Alphabet"
 import '../index.css';
 import Register from "./Register"
 import Profile from "./Profile"
 import Learn from "./Learn"
+import Numbers from "./lessons/Numbers"
 
 
 
@@ -27,7 +28,8 @@ function App() {
               <Route path="/" exact component={LandingPage} />
               <Route path="/register" component={Register} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route path="/alphabet" component={Alphabet} />
+              <Route path="/lessons/alphabet" component={Alphabet} />
+              <Route path="/lessons/numbers" component={Numbers} />
               <Route path="/profile" component={Profile} />
               <Route path="/learn" component={Learn} />
             </Switch>

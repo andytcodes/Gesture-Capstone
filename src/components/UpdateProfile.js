@@ -35,7 +35,7 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/profile#") 
+        history.push("/profile#")
         setSuccess("Updated Password!")
       })
       .catch(() => {
@@ -53,7 +53,7 @@ export default function UpdateProfile() {
         <div class="modal-box bg-neutral-content">
           <h2 className="text-primary font-bold text-3xl mb-2">Update Profile</h2>
           {error && <alert variant="danger" class="text-error font-semibold">{error}</alert>}
-          {success && <alert variant="success" class="text-success font-semibold">{success}</alert>}  
+          {success && <alert variant="success" class="text-success font-semibold">{success}</alert>}
           <form onSubmit={handleSubmit}>
             <div id="email" class="form-control">
               <label class="label">
