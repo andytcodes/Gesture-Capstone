@@ -63,7 +63,7 @@ export default function Learn () {
     </div>
 
     <div className="flex mt-10 space-x-4 ">
-      <div class="card shadow text-neutral text-center border ml-4 w-1/4">
+      <div class="card shadow text-neutral text-center border w-1/4">
         <div class="card-body">
           <h2 class="card-title">Numbers</h2> 
           <p>Learn how to count to 10 with ASL!</p>
