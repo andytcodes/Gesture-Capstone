@@ -12,6 +12,7 @@ import '../index.css';
 import Register from "./Register"
 import Profile from "./Profile"
 import Learn from "./Learn"
+import Lessons from "./Lessons"
 
 
 
@@ -29,7 +30,8 @@ function App() {
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/alphabet" component={Alphabet} />
               <Route path="/profile" component={Profile} />
-              <Route path="/learn" component={Learn} />
+              <Route exact path="/learn" component={Learn} />
+              <Route path="/learn/:id" exact component={Lessons}/>
             </Switch>
           </AuthProvider>
         </Router>
