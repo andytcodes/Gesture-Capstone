@@ -32,7 +32,7 @@ export default function Learn () {
   return (
     <>
     {document.documentElement.classList.add('bg-base-content')}
-    <div class="sticky top-0 navbar mb-2 shadow-lg bg-neutral-content text-primary-content">
+    <div class="sticky top-0 navbar mb-2 shadow-md bg-neutral-content text-primary-content">
 
       <div class="flex-1 px-2 mx-2">
         <span class="text-xl font-bold text-primary">

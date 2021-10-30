@@ -34,11 +34,13 @@ export default function Subjects() {
   return(
     <>
       {subjects.map(subject =>(
-        <div 
-        className="text-neutral bg-neutral-content rounded-md border-transparent 
-        h-24 flex justify-center items-center">
-          <h1 key={subject.id} >{subject.title}</h1>
-        </div>
+          <div 
+          className="text-neutral bg-neutral-content rounded-lg border-transparent 
+          h-36 flex flex-col justify-center items-center shadow-xl 
+          transition duration-300 hover:bg-accent hover:text-secondary-content transform hover:scale-90">
+            <h1 key={subject.id} className="text-2xl font-semibold">{subject.title}</h1>
+            <p className="mt-2">{subject.desc}</p>
+          </div>
       ))}
     </>
   );
