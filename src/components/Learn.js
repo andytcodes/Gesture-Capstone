@@ -1,16 +1,14 @@
 import React, { useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import '../App.css';
 import app from "../firebase";
+import Subjects from "./Subjects";
 
 export default function Learn () {
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
   const history = useHistory()
   const user = app.auth().currentUser;
-  const userID = user.uid;
-  const userEmail = user.email;
 
   app.auth().onAuthStateChanged(function(user){
     if(user){
@@ -31,16 +29,6 @@ export default function Learn () {
     }
   };
 
-  function writeUserData(userID, userEmail) {
-
-    app.database().ref('users/' + userID).set({
-
-      Email: userEmail,
-    });
-  }
-
-  writeUserData(userID, userEmail);
-
   return (
     <>
     {document.documentElement.classList.add('bg-base-content')}
@@ -59,10 +47,16 @@ export default function Learn () {
           <Link class="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</Link>
         </div>
       </div>
-
     </div>
 
-    <div className="flex mt-10 space-x-4 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 p-4 gap-3">
+      <Subjects/>
+    </div>
+    </>
+  )
+}
+
+{/* <div className="flex mt-10 space-x-4 ">
       <div class="card shadow text-neutral text-center border w-1/4">
         <div class="card-body">
           <h2 class="card-title">Numbers</h2> 
@@ -87,7 +81,4 @@ export default function Learn () {
           <p>Let's learn how to say I Love You in the fastest way possible!</p>
         </div>
       </div> 
-    </div>
-    </>
-  )
-}
+    </div> */}
