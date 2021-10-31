@@ -55,30 +55,3 @@ export default function Learn () {
     </>
   )
 }
-
-{/* <div className="flex mt-10 space-x-4 ">
-      <div class="card shadow text-neutral text-center border w-1/4">
-        <div class="card-body">
-          <h2 class="card-title">Numbers</h2> 
-          <p>Learn how to count to 10 with ASL!</p>
-        </div>
-      </div>
-      <div class="card shadow text-neutral text-center border w-1/4">
-        <div class="card-body">
-          <h2 class="card-title">Alphabet</h2> 
-          <p>Learn how to sign all 26 letters!</p>
-        </div>
-      </div>
-      <div class="card shadow text-neutral text-center border border border-accent w-1/4">
-        <div class="card-body">
-          <h2 class="card-title">Quiz 1</h2> 
-          <p>Your very first Quiz! Come an test what you've learnt so far!</p>
-        </div>
-      </div>   
-      <div class="card shadow text-neutral text-center border w-1/4">
-        <div class="card-body">
-          <h2 class="card-title">Shortcut: I Love You</h2> 
-          <p>Let's learn how to say I Love You in the fastest way possible!</p>
-        </div>
-      </div> 
-    </div> */}
