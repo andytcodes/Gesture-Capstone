@@ -18,7 +18,7 @@ export default function Lesson(){
       <NavBar page="learn"/>
 
       {/* content */}
-
+      <h1 className="text-primary text-center text-4xl font-bold underline mb-10 mt-12">{l}</h1>
     </>
   );
 }
