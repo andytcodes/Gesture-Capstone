@@ -9,9 +9,9 @@ export default function Learn () {
 
   return (
     <>
-    <NavBar page="learn"/>
-      
-    <Subjects/>
+      <NavBar page="learn"/>
+        
+      <Subjects/>
     </>
   )
 }
