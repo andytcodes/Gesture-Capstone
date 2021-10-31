@@ -34,10 +34,12 @@ export default function Subjects() {
   //populate page by display subjects
   return(
     <>
+    <h1 className="text-primary text-center text-4xl font-bold underline mb-10 mt-12">Subjects</h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 p-4 gap-3">
       {subjects.map(subject =>(
         <Link to={`/learn/${subject.link}`} key={subject.id}>
           <div 
-            className="text-neutral bg-neutral-content rounded-lg border-transparent 
+            className="text-neutral bg-neutral-content rounded-lg border-gray-200 border-2 
             h-36 flex flex-col justify-center items-center shadow-xl 
             transition duration-300 hover:bg-accent hover:text-secondary-content transform hover:scale-90">
               <h1 key={subject.id} className="text-2xl font-semibold">{subject.title}</h1>
@@ -46,6 +48,7 @@ export default function Subjects() {
         </Link>
           
       ))}
+    </div>
     </>
   );
 
