@@ -50,10 +50,10 @@ export default function Lesson(){
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 px-16 md:px-24 2xl:px-96 gap-3 text-neutral my-12">
-        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64">
+        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64 shadow-md py-4">
           <img src={lesson.img} alt={lesson.title}/>
         </div>
-        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64">
+        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64 shadow-md py-4">
           <img src={lesson.img} alt={lesson.title}/>
         </div>
       </div>
