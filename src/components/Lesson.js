@@ -2,9 +2,11 @@
  * Page for lesson
  * @author Andy Tran
  */
-
+import React, {useEffect, useState} from "react";
 import { useParams } from "react-router";
 import NavBar from "./NavBar";
+import {db} from "../firebase";
+import { Link } from "react-router-dom";
 
 export default function Lesson(){
 
@@ -13,12 +15,67 @@ export default function Lesson(){
   const {l} = useParams();
   // console.log(s + " " + l);
 
+  //Subject and Lesson data
+  const [subject, setSubject] = useState({});
+  const [lesson, setLesson] = useState([]);
+
+  //useEffect to fetch and store lesson data
+  useEffect(() => {
+    async function fetchSubject(){
+      const querySnapshot = await db.collection("Lessons").doc(`${s}`).get();
+      const data = querySnapshot.data();
+
+      setSubject(data);
+      setLesson(data.lessons[l]);
+      console.log(data);
+      console.log(data.lessons[l]);
+    }
+
+    fetchSubject();
+  }, []);
+
+
   return(
     <>
       <NavBar page="learn"/>
 
       {/* content */}
-      <h1 className="text-primary text-center text-4xl font-bold underline mb-10 mt-12">{l}</h1>
+      <h1 className="text-primary text-center text-4xl font-bold underline mb-10 mt-12">{lesson.title}</h1>
+
+      <div className="text-center mx-4 md:mx-10">
+        <h1 className="text-neutral text-center text-lg text-opacity-80 
+        font-semibold rounded-lg border-info border-opacity-30 border-2 inline-block p-4 shadow-lg">
+          {lesson.desc}
+        </h1>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 px-16 md:px-24 2xl:px-96 gap-3 text-neutral my-12">
+        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64">
+          <img src={lesson.img} alt={lesson.title}/>
+        </div>
+        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64">
+          <img src={lesson.img} alt={lesson.title}/>
+        </div>
+      </div>
+
+      <div className="text-center mb-8">
+        <a href={`/learn/${s}/${parseInt(l)+1}`} 
+          className="py-4 w-10/12 md:w-5/12 2xl:w-3/12 inline-block 
+          border-solid rounded-lg border-success border-2 shadow-md bg-success
+          transition duration-300 hover:bg-accent transform hover:-translate-y-2 hover:scale-110">
+          <h1 className="text-base-content text-2xl font-semibold">Go to next lesson</h1>
+        </a>
+      </div>
+
+      <div className="text-center mb-8">
+        <a href="/gesture"
+          className="py-4 w-10/12 md:w-5/12 2xl:w-3/12 inline-block 
+          border-solid rounded-lg border-primary border-2 shadow-md bg-primary
+          transition duration-300 hover:bg-primary-focus transform hover:-translate-y-2 hover:scale-110">
+          <h1 className="text-base-content text-2xl font-semibold">Test your form</h1>
+        </a>
+      </div>
+      
     </>
   );
 }

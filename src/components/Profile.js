@@ -11,13 +11,13 @@ export default function Profile () {
 
   return (
     <>
-    <NavBar page="profile"/>
+      <NavBar page="profile"/>
 
-    <div className="text-center mt-10 text-neutral">
-        <h2 className="mb-4 text-3xl">Profile</h2>
-        <strong>Email:</strong> {currentUser.email} <br />
-        <UpdateProfile/>
-    </div>
+      <div className="text-center mt-10 text-neutral">
+          <h2 className="mb-4 text-3xl">Profile</h2>
+          <strong>Email:</strong> {currentUser.email} <br />
+          <UpdateProfile/>
+      </div>
     </>
   )
 }
