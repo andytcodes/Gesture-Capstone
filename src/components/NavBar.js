@@ -72,9 +72,9 @@ export default function NavBar(props) {
         </div>
         <div class="flex-none hidden px-2 mx-2 lg:flex">
           <div class="flex items-stretch">
-            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 ${dashboard}`} to="/dashboard">Dashboard</Link>
-            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 ${learn}`} to="/learn">Learn</Link>
-            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 ${profile}`} to="/profile">Profile</Link>
+            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${dashboard}`} to="/dashboard">Dashboard</Link>
+            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${learn}`} to="/learn">Learn</Link>
+            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${profile}`} to="/profile">Profile</Link>
             <Link class="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</Link>
           </div>
         </div>
