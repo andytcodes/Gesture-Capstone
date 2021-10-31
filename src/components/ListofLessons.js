@@ -12,7 +12,7 @@ import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import app, {db} from "../firebase";
 
-export default function Lessons(){
+export default function ListofLessons(){
 
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
@@ -83,7 +83,7 @@ export default function Lessons(){
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 p-4 gap-3">
         {lessons.map(s =>(
-          <Link to={`/learn/${id}/${s}`}>
+          <Link to={`/learn/${id}/${s}`}> 
             <div 
               className="text-neutral bg-neutral-content rounded-lg border-transparent 
               h-36 flex flex-col justify-center items-center shadow-xl 
