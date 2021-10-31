@@ -19,6 +19,10 @@ export default function Lesson(){
   const [subject, setSubject] = useState({});
   const [lesson, setLesson] = useState([]);
 
+  //Link for next lesson / last lesson
+  const [link, setLink] = useState(`/learn/${s}/${parseInt(l)+1}`);
+  const [linkText, setLinkText] = useState("Go to next lesson");
+
   //useEffect to fetch and store lesson data
   useEffect(() => {
     async function fetchSubject(){
@@ -27,6 +31,13 @@ export default function Lesson(){
 
       setSubject(data);
       setLesson(data.lessons[l]);
+
+      //Changes link text and location if last item in subject
+      if(parseInt(l) === data.lessons.length - 1){
+        setLink(`/learn`);
+        setLinkText("You Finished! Go back to Subjects");
+      }
+
       console.log(data);
       console.log(data.lessons[l]);
     }
@@ -34,7 +45,7 @@ export default function Lesson(){
     fetchSubject();
   }, []);
 
-
+  
   return(
     <>
       <NavBar page="learn"/>
@@ -59,11 +70,11 @@ export default function Lesson(){
       </div>
 
       <div className="text-center mb-8">
-        <a href={`/learn/${s}/${parseInt(l)+1}`} 
+        <a href={link} 
           className="py-4 w-10/12 md:w-5/12 2xl:w-3/12 inline-block 
           border-solid rounded-lg border-success border-2 shadow-md bg-success
           transition duration-300 hover:bg-accent transform hover:-translate-y-2 hover:scale-110">
-          <h1 className="text-base-content text-2xl font-semibold">Go to next lesson</h1>
+          <h1 className="text-base-content text-2xl font-semibold">{linkText}</h1>
         </a>
       </div>
 
