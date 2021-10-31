@@ -34,6 +34,7 @@ export default function Subjects() {
   //populate page by display subjects
   return(
     <>
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 p-4 gap-3">
       {subjects.map(subject =>(
         <Link to={`/learn/${subject.link}`} key={subject.id}>
           <div 
@@ -46,6 +47,7 @@ export default function Subjects() {
         </Link>
           
       ))}
+    </div>
     </>
   );
 

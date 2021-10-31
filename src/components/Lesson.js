@@ -22,7 +22,7 @@ export default function Lesson(){
       <NavBar page="learn"/>
 
       {/* content */}
-
+      
     </>
   );
 }
