@@ -35,7 +35,7 @@ export default function Subjects() {
   return(
     <>
       {subjects.map(subject =>(
-        <Link to={`/learn/${subject.link}`}>
+        <Link to={`/learn/${subject.link}`} key={subject.id}>
           <div 
             className="text-neutral bg-neutral-content rounded-lg border-transparent 
             h-36 flex flex-col justify-center items-center shadow-xl 

@@ -12,7 +12,8 @@ import '../index.css';
 import Register from "./Register"
 import Profile from "./Profile"
 import Learn from "./Learn"
-import Lessons from "./Lessons"
+import ListofLessons from "./ListofLessons"
+import Lesson from "./Lesson"
 
 
 
@@ -31,7 +32,8 @@ function App() {
               <Route path="/alphabet" component={Alphabet} />
               <Route path="/profile" component={Profile} />
               <Route exact path="/learn" component={Learn} />
-              <Route path="/learn/:id" exact component={Lessons}/>
+              <Route path="/learn/:id" exact component={ListofLessons}/>
+              <Route path="/learn/:s/:l" exact component={Lesson}/>
             </Switch>
           </AuthProvider>
         </Router>
