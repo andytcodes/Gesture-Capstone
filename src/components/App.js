@@ -33,7 +33,7 @@ function App() {
               <Route path="/profile" component={Profile} />
               <Route exact path="/learn" component={Learn} />
               <Route path="/learn/:id" exact component={ListofLessons}/>
-              <Route path="/learn/:id/:lesson" exact component={Lesson}/>
+              <Route path="/learn/:s/:l" exact component={Lesson}/>
             </Switch>
           </AuthProvider>
         </Router>

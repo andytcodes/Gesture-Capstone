@@ -4,8 +4,6 @@
  */
 
 
-// TODO: Update link to go to lesson pages
-
 import { useParams } from "react-router";
 import React, { useState, useEffect} from "react"
 import { useAuth } from "../contexts/AuthContext"
@@ -38,7 +36,7 @@ export default function ListofLessons(){
     }
   };
 
-  //get id of current page
+  //get id (subject) of current page
   const {id} = useParams();
   // console.log(id);
   
@@ -83,7 +81,7 @@ export default function ListofLessons(){
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 p-4 gap-3">
         {lessons.map(s =>(
-          <Link to={`/learn/${id}/${s}`}> 
+          <Link to={`/learn/${id}/${s}`} key={s.id}> 
             <div 
               className="text-neutral bg-neutral-content rounded-lg border-transparent 
               h-36 flex flex-col justify-center items-center shadow-xl 
