@@ -19,6 +19,14 @@ export default function Lesson(){
 
       {/* content */}
       <h1 className="text-primary text-center text-4xl font-bold underline mb-10 mt-12">{l}</h1>
+      <div className="grid grid-cols-2 px-6 gap-3 text-neutral">
+        <div>
+          
+        </div>
+        <div>
+          
+        </div>
+      </div>
     </>
   );
 }
