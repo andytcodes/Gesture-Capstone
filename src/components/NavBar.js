@@ -16,6 +16,7 @@ export default function NavBar(props) {
   let dashboard = "text-neutral";
   let learn = "text-neutral";
   let profile = "text-neutral";
+  let gesture = "text-neutral";
 
   switch(props.page){
     case "dashboard":
@@ -26,6 +27,9 @@ export default function NavBar(props) {
       break;
     case "profile":
       profile = "text-primary";
+      break;
+    case "gesture":
+      gesture = "text-primary";
       break;
     default:
       dashboard = "text-neutral";
@@ -70,14 +74,43 @@ export default function NavBar(props) {
             Gesture
           </span>
         </div>
-        <div class="flex-none hidden px-2 mx-2 lg:flex">
-          <div class="flex items-stretch">
-            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${dashboard}`} to="/dashboard">Dashboard</Link>
-            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${learn}`} to="/learn">Learn</Link>
-            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${profile}`} to="/profile">Profile</Link>
-            <Link class="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</Link>
+        <div className="flex-none hidden px-2 mx-2 md:flex">
+          <div className="flex items-stretch">
+            <Link className={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${dashboard}`} to="/dashboard">Dashboard</Link>
+            <Link className={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${learn}`} to="/learn">Learn</Link>
+            <Link className={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${gesture}`} to="/gesture">Gesture</Link>
+            <Link className={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${profile}`} to="/profile">Profile</Link>
+            <Link className="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</Link>
           </div>
         </div>
+
+        {/* Dropdown menu for mobile users */}
+        <div className="dropdown dropdown-left md:hidden">
+          <div tabindex="0" className="btn btn-ghost">Menu</div> 
+          <ul tabindex="0" 
+          className="py-2 shadow menu dropdown-content bg-base-content 
+          bg-opacity-80 rounded-box w-52 absolute 
+          border-2 border-solid border-primary border-opacity-5">
+
+            <li className="bg-base-content shadow-md m-1 rounded-box">
+              <Link to="/dashboard">Dashboard</Link>
+            </li> 
+            <li className="bg-base-content shadow-md m-1 rounded-box">
+              <Link to="/learn">Learn</Link>
+            </li> 
+            <li className="bg-base-content shadow-md m-1 rounded-box">
+              <Link to="/gesture">Gesture</Link>
+            </li>
+            <li className="bg-base-content shadow-md m-1 rounded-box">
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li className="bg-base-content shadow-md m-1 rounded-box">
+              <Link variant="link" onClick={handleLogout}>Logout</Link>
+            </li>
+
+          </ul>
+        </div>
+
       </div>
       </>
   )

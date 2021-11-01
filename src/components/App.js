@@ -14,6 +14,7 @@ import Profile from "./Profile"
 import Learn from "./Learn"
 import ListofLessons from "./ListofLessons"
 import Lesson from "./Lesson"
+import Gesture from "./Gesture"
 
 
 
@@ -34,6 +35,7 @@ function App() {
               <Route exact path="/learn" component={Learn} />
               <Route path="/learn/:id" exact component={ListofLessons}/>
               <Route path="/learn/:s/:l" exact component={Lesson}/>
+              <Route path="/gesture" exact component={Gesture}/>
             </Switch>
           </AuthProvider>
         </Router>
