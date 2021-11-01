@@ -16,6 +16,7 @@ export default function NavBar(props) {
   let dashboard = "text-neutral";
   let learn = "text-neutral";
   let profile = "text-neutral";
+  let gesture = "text-neutral";
 
   switch(props.page){
     case "dashboard":
@@ -26,6 +27,9 @@ export default function NavBar(props) {
       break;
     case "profile":
       profile = "text-primary";
+      break;
+    case "gesture":
+      gesture = "text-primary";
       break;
     default:
       dashboard = "text-neutral";
@@ -74,6 +78,7 @@ export default function NavBar(props) {
           <div class="flex items-stretch">
             <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${dashboard}`} to="/dashboard">Dashboard</Link>
             <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${learn}`} to="/learn">Learn</Link>
+            <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${gesture}`} to="/gesture">Gesture</Link>
             <Link class={`btn btn-ghost btn-sm rounded-btn mr-2 transition duration-200 hover:text-primary-focus ${profile}`} to="/profile">Profile</Link>
             <Link class="btn btn-host btn-sm rounded-btn btn-warning mr-2" variant="link" onClick={handleLogout}>Logout</Link>
           </div>
