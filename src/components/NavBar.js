@@ -92,19 +92,19 @@ export default function NavBar(props) {
           bg-opacity-80 rounded-box w-52 absolute 
           border-2 border-solid border-primary border-opacity-5">
 
-            <li className="bg-base-content shadow-md m-1 rounded-box">
+            <li className="bg-base-content bg-opacity-70 shadow-md m-1 rounded-box">
               <Link to="/dashboard">Dashboard</Link>
             </li> 
-            <li className="bg-base-content shadow-md m-1 rounded-box">
+            <li className="bg-base-content bg-opacity-70 shadow-md m-1 rounded-box">
               <Link to="/learn">Learn</Link>
             </li> 
-            <li className="bg-base-content shadow-md m-1 rounded-box">
+            <li className="bg-base-content bg-opacity-70 shadow-md m-1 rounded-box">
               <Link to="/gesture">Gesture</Link>
             </li>
-            <li className="bg-base-content shadow-md m-1 rounded-box">
+            <li className="bg-base-content bg-opacity-70 shadow-md m-1 rounded-box">
               <Link to="/profile">Profile</Link>
             </li>
-            <li className="bg-base-content shadow-md m-1 rounded-box">
+            <li className="bg-primary bg-opacity-70 shadow-md m-1 rounded-box">
               <Link variant="link" onClick={handleLogout}>Logout</Link>
             </li>
 
