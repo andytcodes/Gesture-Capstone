@@ -60,12 +60,12 @@ export default function Lesson(){
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 px-16 md:px-24 2xl:px-96 gap-3 text-neutral my-12">
-        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64 shadow-md py-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 stext-neutral my-12">
+        <div className="w-11/12 xl:w-8/12 2xl:w-5/12 mx-auto md:mr-0 lg:mr-0 flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64 shadow-md py-4">
           <img src={lesson.img} alt={lesson.title}/>
         </div>
-        <div className="flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64 shadow-md py-4">
-          <img src={lesson.img} alt={lesson.title}/>
+        <div className="w-11/12 xl:w-8/12 2xl:w-5/12 mx-auto md:ml-0 lg:ml-0 flex justify-center bg-neutral-content rounded-lg border-gray-200 border-2 h-64 shadow-md py-4">
+          <img src={lesson.gif} alt={lesson.title}/>
         </div>
       </div>
 
