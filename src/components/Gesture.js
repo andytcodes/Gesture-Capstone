@@ -120,8 +120,8 @@ export default function Gesture(){
       
         <div className="flex justify-center">
           <Webcam ref={webcamRef} id="webcam" 
-          className="w-6/12 h-6/12 absolute rounded-box border-8 border-success border-opacity-50 shadow-xl"/>
-          <canvas ref={canvasRef} className="w-6/12 h-6/12 absolute"/>
+          className="w-7/12 h-7/12 xl:w-4/12 xl:h-4/12 2xl:w-3/12 2xl:h-3/12 absolute rounded-box border-8 border-success border-opacity-50 shadow-xl"/>
+          <canvas ref={canvasRef} className="w-7/12 h-7/12 xl:w-4/12 xl:h-4/12 2xl:w-3/12 2xl:h-3/12 absolute"/>
         </div>
       </div>
       
