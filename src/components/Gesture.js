@@ -19,7 +19,8 @@ export default function Gesture(){
     B: alphabet.b_img,
     C: alphabet.c_img,
     D: alphabet.d_img,
-    E: alphabet.e_img
+    E: alphabet.e_img,
+    ILOVEYOU: alphabet.ilu_img
   };
 
   //load Handpose model
@@ -65,7 +66,8 @@ export default function Gesture(){
             alphabet.alphabet_B_Gesture,
             alphabet.alphabet_C_Gesture,
             alphabet.alphabet_D_Gesture,
-            alphabet.alphabet_E_Gesture
+            alphabet.alphabet_E_Gesture,
+            alphabet.ILU_Gesture
           ]);
 
           const gesture = await GE.estimate(hand[0].landmarks, 4);

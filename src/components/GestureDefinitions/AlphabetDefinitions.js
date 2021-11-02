@@ -8,6 +8,7 @@ import b_img from './images/Alphabets/b.PNG';
 import c_img from './images/Alphabets/c.PNG';
 import d_img from './images/Alphabets/d.PNG';
 import e_img from './images/Alphabets/e.PNG';
+import ilu_img from './images/Alphabets/iloveyou.png';
 
 
 // ----- A -----
@@ -83,6 +84,20 @@ alphabet_E_Gesture.addCurl(Finger.Ring, FingerCurl.HalfCurl, 1.0);
 //Pinky
 alphabet_E_Gesture.addCurl(Finger.Pinky, FingerCurl.HalfCurl, 1.0);
 
+// ----- ILU -----
+export const ILU_Gesture = new GestureDescription('ILOVEYOU');
+//Thumb
+ILU_Gesture.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
+ILU_Gesture.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 0.25);
+//Index
+ILU_Gesture.addCurl(Finger.Index, FingerCurl.NoCurl, 1.0);
+//Middle
+ILU_Gesture.addCurl(Finger.Middle, FingerCurl.FullCurl, 1.0);
+//Ring
+ILU_Gesture.addCurl(Finger.Ring, FingerCurl.FullCurl, 1.0);
+//Pinky
+ILU_Gesture.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1.0);
+
  export default{
   a_img,
   b_img,
@@ -93,5 +108,7 @@ alphabet_E_Gesture.addCurl(Finger.Pinky, FingerCurl.HalfCurl, 1.0);
   alphabet_B_Gesture,
   alphabet_C_Gesture,
   alphabet_D_Gesture,
-  alphabet_E_Gesture
+  alphabet_E_Gesture,
+  ILU_Gesture,
+  ilu_img
  }
