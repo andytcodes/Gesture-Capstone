@@ -17,7 +17,7 @@ export default function NavBar(props) {
   let learn = "text-neutral";
   let profile = "text-neutral";
 
-  switch(props.page){
+  switch (props.page) {
     case "dashboard":
       dashboard = "text-primary";
       break;
@@ -44,22 +44,11 @@ export default function NavBar(props) {
     }
   };
 
-  app.auth().onAuthStateChanged(function(user){
-    if(user){
+  app.auth().onAuthStateChanged(function (user) {
+    if (user) {
       console.log("user is siged in");
     }
   })
-
-  function writeUserData(userID, userEmail) {
-
-    app.database().ref('users/' + userID).set({
-
-      Email: userEmail,
-    });
-  }
-
-  writeUserData(userID, userEmail);
-
 
   return (
     <>
@@ -79,6 +68,6 @@ export default function NavBar(props) {
           </div>
         </div>
       </div>
-      </>
+    </>
   )
 };

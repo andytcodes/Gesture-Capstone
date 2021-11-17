@@ -29,6 +29,17 @@
   color: #61dafb;
 }
 
+.userWrap {
+  text-align: left;
+  margin: auto auto auto 40%;
+}
+
+.avatar {
+  height: 10%;
+  width: 10%;
+  border-radius: 50%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
