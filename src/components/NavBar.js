@@ -18,7 +18,7 @@ export default function NavBar(props) {
   let profile = "text-neutral";
   let gesture = "text-neutral";
 
-  switch(props.page){
+  switch (props.page) {
     case "dashboard":
       dashboard = "text-primary";
       break;
@@ -48,22 +48,11 @@ export default function NavBar(props) {
     }
   };
 
-  app.auth().onAuthStateChanged(function(user){
-    if(user){
+  app.auth().onAuthStateChanged(function (user) {
+    if (user) {
       console.log("user is siged in");
     }
   })
-
-  function writeUserData(userID, userEmail) {
-
-    app.database().ref('users/' + userID).set({
-
-      Email: userEmail,
-    });
-  }
-
-  writeUserData(userID, userEmail);
-
 
   return (
     <>
@@ -86,18 +75,18 @@ export default function NavBar(props) {
 
         {/* Dropdown menu for mobile users */}
         <div className="dropdown dropdown-left md:hidden">
-          <div tabindex="0" className="btn btn-ghost">Menu</div> 
-          <ul tabindex="0" 
-          className="py-2 shadow menu dropdown-content bg-base-content 
+          <div tabindex="0" className="btn btn-ghost">Menu</div>
+          <ul tabindex="0"
+            className="py-2 shadow menu dropdown-content bg-base-content 
           bg-opacity-80 rounded-box w-52 absolute 
           border-2 border-solid border-primary border-opacity-5">
 
             <li className="bg-base-content shadow-md m-1 rounded-box">
               <Link to="/dashboard">Dashboard</Link>
-            </li> 
+            </li>
             <li className="bg-base-content shadow-md m-1 rounded-box">
               <Link to="/learn">Learn</Link>
-            </li> 
+            </li>
             <li className="bg-base-content shadow-md m-1 rounded-box">
               <Link to="/gesture">Gesture</Link>
             </li>
@@ -112,6 +101,6 @@ export default function NavBar(props) {
         </div>
 
       </div>
-      </>
+    </>
   )
 };
